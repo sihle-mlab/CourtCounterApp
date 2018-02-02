@@ -1,14 +1,127 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
+
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Court Counter</ion-title>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<ion-content no-padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <h5 text-center>
+          Team A
+        </h5>
+        <h1 text-center>
+          {{firstTeamTotal}}
+        </h1>
+        <p text-center>
+          Score
+        </p>
+        <ion-list no-lines no-padding>
+          <ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-6>
+                  <button ion-button block (click)="addToFirstTeamCounter(-3)">-3</button>
+                </ion-col>
+                <ion-col col-6>
+                  <button ion-button block  (click)="addToFirstTeamCounter(3)">+3</button>
+                </ion-col>
+              </ion-row>
+
+            </ion-grid>
+          </ion-item>
+          <ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-6>
+                  <button ion-button block  (click)="addToFirstTeamCounter(-2)">-2</button>
+                </ion-col>
+                <ion-col col-6>
+                  <button ion-button block  (click)="addToFirstTeamCounter(2)">+2</button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+          <ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-6>
+                  <button ion-button block  (click)="addToFirstTeamCounter(-1)">-1</button>
+                </ion-col>
+                <ion-col col-6>
+                  <button ion-button block  (click)="addToFirstTeamCounter(1)">+1</button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+
+      </ion-col>
+      <ion-col col-6>
+        <h5 text-center>
+          Team B
+        </h5>
+        <h1 text-center>
+          {{secondTeamTotal}}
+        </h1>
+        <p text-center>
+          Score
+        </p>
+        <ion-list no-lines no-padding>
+          <ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-6>
+                  <button ion-button block (click)="addToSecondTeamCounter(-3)">-3</button>
+                </ion-col>
+                <ion-col col-6>
+                  <button ion-button block (click)="addToSecondTeamCounter(3)">+3</button>
+                </ion-col>
+              </ion-row>
+
+            </ion-grid>
+          </ion-item>
+          <ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-6>
+                  <button ion-button block (click)="addToSecondTeamCounter(-2)">-2</button>
+                </ion-col>
+                <ion-col col-6>
+                  <button ion-button block (click)="addToSecondTeamCounter(2)">+2</button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+          <ion-item>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-6>
+                  <button ion-button block (click)="addToSecondTeamCounter(-1)">-1</button>
+                </ion-col>
+                <ion-col col-6>
+                  <button ion-button block (click)="addToSecondTeamCounter(1)">+1</button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <button id="reset" ion-button block (click)="resetCounter()">Reset</button>
+
 </ion-content>
